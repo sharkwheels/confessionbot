@@ -9,8 +9,8 @@ from twython import TwythonStreamer
 
 ### GET KEYS  #########################################################################
 
-CONSUMER_KEY = os.environ['TWIT_KEY']
-CONSUMER_SECRET = os.environ['TWIT_SECRET']
+CONSUMER_KEY = os.environ['CONSUMER_KEY']
+CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
 OAUTH_TOKEN = os.environ['OAUTH_TOKEN']
 OAUTH_TOKEN_SECRET = os.environ['OAUTH_TOKEN_SECRET']
 
