@@ -1,0 +1,13 @@
+*.pyc
+*.sublime-project
+*.sublime-workspace
+*.log
+*.cfg
+backup
+venv
+examples
+twitter.txt
+save.py
+makedb.py
+pytest.py
+newrelic.ini
