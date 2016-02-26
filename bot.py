@@ -75,8 +75,8 @@ class ConStreamer(TwythonStreamer):
 			
 		else:
 			pass
-		#twitter.destroy_direct_message(id=msgId)
-	"""
+		twitter.destroy_direct_message(id=msgId)
+	
 	def get_random(self):
 		sayings = [
 			"I'm sorry, I don't really deal w/ @ responses.",
@@ -97,7 +97,7 @@ class ConStreamer(TwythonStreamer):
 				print(toTweet)
 			except TwythonError as e:
 				print(e)
-	"""
+	
 
 	def on_error(self, status_code, data):
 		print(status_code, data)
