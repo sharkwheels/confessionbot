@@ -27,8 +27,10 @@ class ConStreamer(TwythonStreamer):
 	def on_success(self, data):
 		if 'direct_message' in data:
 			self.deal_direct(data)
+		"""
 		elif 'text' in data:
 			self.deal_public_response(data)
+		"""
 		
 	def deal_direct(self,data):
 
@@ -74,7 +76,7 @@ class ConStreamer(TwythonStreamer):
 		else:
 			pass
 		#twitter.destroy_direct_message(id=msgId)
-
+	"""
 	def get_random(self):
 		sayings = [
 			"I'm sorry, I don't really deal w/ @ responses.",
@@ -95,6 +97,7 @@ class ConStreamer(TwythonStreamer):
 				print(toTweet)
 			except TwythonError as e:
 				print(e)
+	"""
 
 	def on_error(self, status_code, data):
 		print(status_code, data)
