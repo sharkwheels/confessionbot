@@ -42,7 +42,7 @@ class ConStreamer(TwythonStreamer):
 		forgot = "You need to start your DM with: ~"
 
 		### controls and stops
-		controlID = 702261128458584065
+		controlID = os.environ['CNTL_ID']
 		controlC = '~'
 		stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http'])  ## no tire fires, no tagging, no hashtags, no links, no pics
 
