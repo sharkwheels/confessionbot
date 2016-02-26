@@ -7,6 +7,8 @@ from random import choice
 from twython import Twython, TwythonError
 from twython import TwythonStreamer
 
+
+
 ### GET KEYS  #########################################################################
 
 CONSUMER_KEY = os.environ['CONSUMER_KEY']
@@ -45,6 +47,7 @@ class ConStreamer(TwythonStreamer):
 		controlID = os.environ['CTRL_ID']
 		controlC = '~'
 		stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http'])  ## no tire fires, no tagging, no hashtags, no links, no pics
+		
 
 		### general logic 
 			### refactor this...
