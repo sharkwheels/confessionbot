@@ -117,7 +117,7 @@ class ConStreamer(TwythonStreamer):
 
 	def on_error(self, status_code, data):
 		print(status_code, data)
-		#self.disconnect()
+		self.disconnect()
 		
 
 
