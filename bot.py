@@ -80,7 +80,23 @@ class ConStreamer(TwythonStreamer):
 	def get_random(self):
 		sayings = [
 			"I'm sorry, I don't really deal w/ @ responses.",
-			"Check the pinned tweet."
+			"Check the pinned tweet.",
+			"Look at the pinned tweet.",
+			"Check out the pinned tweet.",
+			"The pinned tweet will tell you how to work this.",
+			"I don't work with @ responses.",
+			"I don't really work with @ responses.",
+			"Try a DM rather than an @ response.",
+			"Check out the sidebar or the pinned tweet.",
+			"You'll probably want to try a DM.",
+			"Void spitters only work with DMs.",
+			"The void only listens to your DMs.",
+			"Pinned Tweet my friend.",
+			"Voids + @ resposes = beep beep beep",
+			"Beep beep beep",
+			"Bzzzzzzzzzzzzzzzzzzzzzz",
+			"Beeeeeeeeeesssssssssss",
+			"Merp"
 		]
 		choice = random.choice(sayings)
 		return choice
