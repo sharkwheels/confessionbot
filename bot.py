@@ -53,7 +53,7 @@ class ConStreamer(TwythonStreamer):
 		if recepId == controlID and body.startswith(controlC):
 			## test for swears and shit
 			if not any(w in body for w in stopWords):
-				body = re.sub('^~\s','',body)
+				body = re.sub('^~','',body)
 				b = re.sub('\s+',' ',body)
 				try:
 					twitter.update_status(status=b)
