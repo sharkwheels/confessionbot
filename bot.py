@@ -27,10 +27,8 @@ class ConStreamer(TwythonStreamer):
 	def on_success(self, data):
 		if 'direct_message' in data:
 			self.deal_direct(data)
-		"""
 		elif 'text' in data:
 			self.deal_public_response(data)
-		"""
 		
 	def deal_direct(self,data):
 
@@ -46,7 +44,7 @@ class ConStreamer(TwythonStreamer):
 		forgot = "You need to start your DM with: ~"
 
 		### controls and stops
-		controlID = os.environ['CTRL_ID']
+		controlID = 702261128458584065
 		controlC = '~'
 		stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http'])  ## no tire fires, no tagging, no hashtags, no links, no pics
 		
