@@ -69,6 +69,8 @@ class ConStreamer(TwythonStreamer):
 		elif recepId == controlID and not body.startswith(controlC):
 			twitter.send_direct_message(screen_name=senderName,text=forgot)
 			print(forgot)
+		elif not recepId:
+			print("not the right ID")
 			
 		else:
 			pass
