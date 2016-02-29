@@ -21,7 +21,7 @@ twitter.verify_credentials()
 
 ### controls and stops
 
-controlID = os.environ['CTRL_ID']
+controlID = 702261128458584065
 controlC = '~'
 stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http'])  ## no tire fires, no tagging, no hashtags, no links, no pics
 
