@@ -19,6 +19,14 @@ OAUTH_TOKEN_SECRET = os.environ['OAUTH_TOKEN_SECRET']
 twitter = Twython(CONSUMER_KEY, CONSUMER_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 twitter.verify_credentials()
 
+### controls and stops
+
+controlID = os.environ[CTRL_ID]
+controlC = '~'
+stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http'])  ## no tire fires, no tagging, no hashtags, no links, no pics
+
+tireFire = "You've tripped the twitter tire fire filter! Take out your @ metions / links / pics / slurs and try again. Emojis are cool tho."
+forgot = "You need to start your DM with: ~"
 
 ### CONFFESSI0NAL BOT ##########################################################
 
@@ -38,16 +46,7 @@ class ConStreamer(TwythonStreamer):
 		body = msg['text']
 		recepId = msg['recipient_id']
 		msgId = msg['id']
-		senderName = msg['sender_screen_name']
-
-		tireFire = "You've tripped the twitter tire fire filter! Take out your @ metions / links / pics / slurs and try again. Emojis are cool tho."
-		forgot = "You need to start your DM with: ~"
-
-		### controls and stops
-		controlID = 702261128458584065
-		controlC = '~'
-		stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http'])  ## no tire fires, no tagging, no hashtags, no links, no pics
-		
+		senderName = msg['sender_screen_name']		
 
 		### general logic 
 			### refactor this...
