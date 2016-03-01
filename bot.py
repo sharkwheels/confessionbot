@@ -27,6 +27,7 @@ stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http','fo
 
 tireFire = "You've tripped the tire-fire filter! Take out your @ metions / links / pics / slurs / spam and try again. Emojis are cool tho."
 forgot = "You need to start your DM with: ~"
+toolong = "DMs need to be under 140 characters"
 
 ### CONFFESSI0NAL BOT ##########################################################
 
@@ -55,11 +56,14 @@ class ConStreamer(TwythonStreamer):
 			if not any(w in body for w in stopWords):
 				body = re.sub('^~','',body)
 				b = re.sub('\s+',' ',body)
-				try:
-					twitter.update_status(status=b)
-					print("{0}:{1}".format(recepId,b))
-				except TwythonError as e:
-					print(e)					
+				if len(b) <= 140:
+					try:
+						twitter.update_status(status=b)
+						print("{0}:{1}".format(recepId,b))
+					except TwythonError as e:
+						print(e)
+				elif len(b) > 140:
+					print("too long won't post")					
 			elif any(w in body for w in stopWords):
 				twitter.send_direct_message(screen_name=senderName,text=tireFire)
 				print(tireFire)
