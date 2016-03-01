@@ -61,7 +61,7 @@ class ConStreamer(TwythonStreamer):
 				if len(b) <= 140:
 					try:
 						twitter.update_status(status=b)
-						print("{0}:{1}".format(recepId,b))
+						print("{0}:{1}".format(senderName,b))
 					except TwythonError as e:
 						print(e)
 				elif len(b) > 140:
