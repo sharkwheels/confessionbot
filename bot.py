@@ -23,9 +23,9 @@ twitter.verify_credentials()
 
 controlID = 702261128458584065
 controlC = '~'
-stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http'])  ## no tire fires, no tagging, no hashtags, no links, no pics
+stopWords = set(['rape','murder','nigger','cunt','fag','homo','@','#','http','fortune','sale','gamergate','follow','nazi','bitches'])  ## no tire fires, no tagging, no hashtags, no links, no pics
 
-tireFire = "You've tripped the twitter tire fire filter! Take out your @ metions / links / pics / slurs and try again. Emojis are cool tho."
+tireFire = "You've tripped the tire-fire filter! Take out your @ metions / links / pics / slurs / spam and try again. Emojis are cool tho."
 forgot = "You need to start your DM with: ~"
 
 ### CONFFESSI0NAL BOT ##########################################################
