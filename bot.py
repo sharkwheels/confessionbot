@@ -54,8 +54,10 @@ class ConStreamer(TwythonStreamer):
 		if recepId == controlID and body.startswith(controlC):
 			## test for swears and shit
 			if not any(w in body for w in stopWords):
+				
 				body = re.sub('^~','',body)
 				b = re.sub('\s+',' ',body)
+
 				if len(b) <= 140:
 					try:
 						twitter.update_status(status=b)
@@ -63,7 +65,10 @@ class ConStreamer(TwythonStreamer):
 					except TwythonError as e:
 						print(e)
 				elif len(b) > 140:
-					print("too long won't post")					
+					print("too long won't post")
+				else:
+					pass	
+				
 			elif any(w in body for w in stopWords):
 				twitter.send_direct_message(screen_name=senderName,text=tireFire)
 				print(tireFire)
