@@ -65,10 +65,11 @@ class ConStreamer(TwythonStreamer):
 					except TwythonError as e:
 						print(e)
 				elif len(b) > 140:
+					twitter.send_direct_message(screen_name=senderName,text=toolong)
 					print("too long won't post")
 				else:
 					pass	
-				
+
 			elif any(w in body for w in stopWords):
 				twitter.send_direct_message(screen_name=senderName,text=tireFire)
 				print(tireFire)
